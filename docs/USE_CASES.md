@@ -3,6 +3,16 @@
 The core is useful when an AI-assisted workflow needs an explicit handoff
 between intent, permission, action, and proof.
 
+## Domain-separated personal operating systems
+
+A personal operating system may coordinate life, learning, and business domains
+without treating them as one undifferentiated context. Each integration can
+supply its own permissions, data boundary, and retention rules while using the
+same evidence-aware workflow contract.
+
+The public core does not contain personal records or domain data. It only
+defines the reusable control points.
+
 ## Pull-request review
 
 A review adapter can create a WorkItem from a pull request:
