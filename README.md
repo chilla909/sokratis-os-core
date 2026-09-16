@@ -1,62 +1,97 @@
 # Sokratis-OS
 
+[![CI](https://github.com/chilla909/sokratis-os-core/actions/workflows/ci.yml/badge.svg)](https://github.com/chilla909/sokratis-os-core/actions/workflows/ci.yml)
+
 A provider-neutral control plane for reliable AI-assisted work.
 
-## Status
+## What it does
 
-This is an experimental public-edition candidate. It is a small, runnable reference core extracted from the longer-running Sokratis-OS project. The public edition focuses on the reusable control-plane layer: explicit state, approval gates, evidence, and verification.
+Sokratis-OS makes the control loop around AI-assisted work explicit:
 
-It does not claim public adoption, production readiness, or community scale.
+1. define the work;
+2. plan the next step;
+3. require approval where risk demands it;
+4. execute through an external adapter;
+5. attach evidence and verify the result.
 
-## Why this exists
+The public edition is intentionally small. It provides a deterministic, immutable
+workflow contract that other tools and providers can build around.
 
-AI-assisted work becomes easier to trust when the system can answer four questions:
-
-1. What is the current task?
-2. What may happen next?
-3. Which actions require approval?
-4. What evidence proves that the result was checked?
-
-Sokratis-OS makes those questions explicit in a provider-neutral workflow contract.
-
-## What is included
-
-- A deterministic work-item state machine.
-- Explicit evidence requirements for approval, execution, and verification.
-- A minimal Python reference implementation.
-- Maintainer documentation and CI.
-- A clear boundary between reusable public concepts and private project material.
-
-## What is intentionally excluded
-
-The public edition contains no personal data, credentials, private prompts, financial or trading logic, runtime state, session data, local paths, or private operational history.
-
-## Quick start
+## 30-second demo
 
 ~~~text
 python -m venv .venv
 . .venv/bin/activate
 python -m pip install -e ".[dev]"
+python -m public_core
 pytest
 ~~~
 
-Then inspect examples/minimal_task.json and docs/ARCHITECTURE.md.
+The demo walks a high-risk work item through planning, approval, execution, and
+verification. The tests cover the same contract and its failure paths.
+
+## Why this exists
+
+AI-assisted systems need a shared language for intent, risk, approval, and proof.
+Without that contract, planning and execution can become difficult to inspect,
+review, or reproduce.
+
+Sokratis-OS separates the contract from any particular model, agent, provider,
+runtime, or user interface.
+
+## Included
+
+- immutable work items with explicit state;
+- deterministic transition rules;
+- evidence requirements at approval, execution, and verification gates;
+- a provider-neutral Python reference implementation;
+- runnable examples and tests;
+- CI across supported Python versions;
+- maintainer, security, contribution, and publication-boundary documentation.
+
+## Possible uses
+
+- pull-request review workflows;
+- agent-assisted documentation or refactoring;
+- data and automation pipelines;
+- approval-aware internal tools;
+- experiments comparing different AI providers against one contract.
+
+See docs/USE_CASES.md for concrete examples.
+
+## Boundaries
+
+This package is not an agent framework, scheduler, credentials manager, or
+production security boundary. Integrations must provide their own authentication,
+authorization, isolation, persistence, and audit controls.
+
+The public edition contains no personal data, credentials, private prompts,
+financial or trading logic, runtime state, session data, local paths, or private
+operational history.
 
 ## Project history
 
-Sokratis-OS began as a broader private project and accumulated real development history before this public-edition candidate was prepared. The public edition is a sanitized, reusable extraction of the control-plane ideas, not an unrelated replacement and not a manufactured activity history. See docs/PROJECT_HISTORY.md.
+Sokratis-OS began as a broader private project and accumulated real development
+history before this public edition was prepared. The public repository is a
+sanitized, reusable extraction of the control-plane layer. Its lineage is
+documented openly without exposing the private source history.
+
+## Status
+
+Early-stage reference implementation. It makes no claim of broad adoption or
+production readiness. Progress is measured through reproducible code, tests,
+documentation, and real contributor feedback.
 
 ## Roadmap
 
-- Add a provider-neutral adapter interface.
-- Add structured decision records.
-- Add more property-based and failure-path tests.
-- Document interoperability with external coding agents.
-- Gather feedback before committing to a larger API.
+See docs/ROADMAP.md. The next technical milestone is a small adapter contract
+that lets external tools provide execution and verification without coupling the
+core to a vendor.
 
 ## Contributing
 
-Please read CONTRIBUTING.md before opening an issue or pull request. Small, test-backed changes are preferred.
+Please read CONTRIBUTING.md before opening an issue or pull request. Focused,
+test-backed changes are preferred.
 
 ## License
 

@@ -12,12 +12,26 @@ license = {text = "MIT"}
 authors = [
   {name = "Sokratis-OS contributors"}
 ]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries"
+]
 dependencies = []
 
 [project.optional-dependencies]
 dev = [
   "pytest>=8.0"
 ]
+
+[project.urls]
+Homepage = "https://github.com/chilla909/sokratis-os-core"
+Repository = "https://github.com/chilla909/sokratis-os-core"
+Issues = "https://github.com/chilla909/sokratis-os-core/issues"
 
 [tool.setuptools.packages.find]
 include = ["public_core*"]
