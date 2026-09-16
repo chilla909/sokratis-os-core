@@ -6,9 +6,17 @@ All notable public-edition changes are recorded here.
 
 ### Added
 
-- A provider-neutral execution adapter protocol.
-- A dependency-free in-memory adapter.
-- Adapter contract documentation and failure-path tests.
+- Design thesis for a human-authority, domain-separated governance kernel.
+- Public provenance summary of the private project's verified development milestones.
+- Architectural explanation of the domain-context boundary.
+- Roadmap milestone for explicit domain-context handling.
+
+### Changed
+
+- README now presents the original Sokratis-OS concept and its public-edition
+  boundary more clearly.
+- Project positioning now distinguishes the governance kernel from agent
+  frameworks, schedulers, and provider wrappers.
 
 ## [0.1.0] - 2026-09-16
 
