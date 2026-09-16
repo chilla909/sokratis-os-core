@@ -5,12 +5,20 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "sokratis-os-public-core"
 version = "0.1.0"
-description = "A provider-neutral control plane for reliable AI-assisted work"
+description = "A provider-neutral governance kernel for human-led AI systems"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
   {name = "Sokratis-OS contributors"}
+]
+keywords = [
+  "ai",
+  "ai-agents",
+  "ai-governance",
+  "human-in-the-loop",
+  "workflow",
+  "open-source"
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",
