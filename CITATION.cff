@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: If Sokratis-OS helps your work, please cite this public edition.
+title: Sokratis-OS
+version: 0.1.0
+date-released: 2026-09-16
+type: software
+license: MIT
+authors:
+  - name: Sokratis-OS contributors

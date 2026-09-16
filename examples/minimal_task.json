@@ -1,0 +1,11 @@
+{
+  "task_id": "demo-1",
+  "objective": "Review a proposed change",
+  "risk": "high",
+  "required_evidence": [
+    "plan.md",
+    "human-approval.md",
+    "test-output.txt",
+    "review.md"
+  ]
+}
