@@ -2,6 +2,14 @@
 
 All notable public-edition changes are recorded here.
 
+## Unreleased
+
+### Added
+
+- A provider-neutral execution adapter protocol.
+- A dependency-free in-memory adapter.
+- Adapter contract documentation and failure-path tests.
+
 ## [0.1.0] - 2026-09-16
 
 ### Added

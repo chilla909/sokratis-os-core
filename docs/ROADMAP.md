@@ -15,14 +15,11 @@ Status: complete.
 
 ## M1: adapter contract
 
-Goal: allow external tools to provide execution and verification without coupling
-the core to a vendor.
+Status: complete.
 
-Acceptance criteria:
-
-- a documented adapter protocol;
-- one in-memory reference adapter;
-- tests for successful, rejected, and failed execution;
+- documented provider-neutral adapter protocol;
+- dependency-free in-memory reference adapter;
+- tests for successful, rejected, and invalid-state execution;
 - no provider-specific dependency in the core package.
 
 ## M2: structured decision records

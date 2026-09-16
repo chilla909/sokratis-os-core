@@ -44,7 +44,8 @@ runtime, or user interface.
 - immutable work items with explicit state;
 - deterministic transition rules;
 - evidence requirements at approval, execution, and verification gates;
-- a provider-neutral Python reference implementation;
+- a provider-neutral execution adapter contract;
+- an in-memory adapter for examples and tests;
 - runnable examples and tests;
 - CI across supported Python versions;
 - maintainer, security, contribution, and publication-boundary documentation.
@@ -57,7 +58,7 @@ runtime, or user interface.
 - approval-aware internal tools;
 - experiments comparing different AI providers against one contract.
 
-See docs/USE_CASES.md for concrete examples.
+See docs/USE_CASES.md and docs/ADAPTER_CONTRACT.md for concrete examples.
 
 ## Boundaries
 
@@ -84,9 +85,8 @@ documentation, and real contributor feedback.
 
 ## Roadmap
 
-See docs/ROADMAP.md. The next technical milestone is a small adapter contract
-that lets external tools provide execution and verification without coupling the
-core to a vendor.
+See docs/ROADMAP.md. The adapter contract and in-memory reference adapter are
+implemented; the next milestone is structured decision records.
 
 ## Contributing
 
